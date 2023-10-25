@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Khoa } from '../Models/Khoa';
+import { SinhVien } from '../Models/SinhVien';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ export class QuanLyService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getKhoa(){
-    return this.httpClient.get<Khoa[]>("http://localhost:5231/Home/Get");
+  getSinhVien(){
+    return this.httpClient.get<SinhVien[]>("http://localhost:5183/Home/action");
   }
 }
